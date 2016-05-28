@@ -1,2 +1,53 @@
-<h1>About#index</h1>
-<p>Find me in app/views/about/index.html.erb</p>
+<div class="row">
+  <div class="col-sm-12">
+    <h3>About</h3>
+  </div>
+</div>
+
+<div class="row">
+  <!-- Info on left, map on right -->
+  <main class="col-xs-12 col-sm-6 col-md-6">
+
+  <div class="row">
+    <div class="col-xs-12">
+      18th-20th November. Maynooth University <%= link_to 'Student Union bar', 'http://www.msu.ie/services/the-bar-venue.html', target: '_blank' %>.
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <h4>Contact Us</h4>
+      <p>Send us an email at <%= mail_to 'dominiconinfo@gmail.com' %>.</p>
+
+      <p>You can also find us on <%= link_to 'Facebook', '', target: '_blank'  %>.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <h4>How to find us:</h4>
+      <p>
+      Maynooth is located on the Sligo-Dublin train line, and is the destination
+      for the 66 and 67 Dublin Bus routes. Bus Éireann also run buses that go
+      between Maynooth and Athlone, Ballina, Galway, Longford, Mullingar, Sligo,
+      Tuam, and Westport.
+      </p>
+
+      <p>
+      The Dublin Bus route timetables can be found here:
+      <%= link_to 'maynoothuniversity.ie/location/travelling-bus', 'https://www.maynoothuniversity.ie/location/travelling-bus', target: '_blank'  %>
+      </p>
+    </div>
+  </div>
+
+  </main>
+
+  <!-- Embedded Google map -->
+  <div class="col-xs-12 col-sm-6 col-md-6">
+    <div class="embed-responsive embed-responsive-4by3">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2379.775179009924!2d-6.60585068364122!3d53.383071979986745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48676ffd17a3825d%3A0xbe6c64708f602aaa!2sMaynooth+Students&#39;+Union!5e0!3m2!1sen!2sie!4v1464442821853" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+</div>
+
