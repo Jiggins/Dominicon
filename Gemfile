@@ -46,5 +46,8 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  # Improvements for Ruby's IRB console http://irb.tools
+  gem 'irbtools', :require => 'irbtools/configure'
 end
 
