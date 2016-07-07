@@ -37,4 +37,15 @@ module ApplicationHelper
       end
     end
   end
+
+  # Generates breadcrumbs for any page
+  def breadcrumbs
+    content_tag :ol, class: 'breadcrumb' do
+      split_path = request.path.split('/').drop(1)
+      concat content_tag :li, (link_to 'Home', '/')
+      split_path.each_with_index do |p, i|
+        concat content_tag :li, (link_to p.capitalize, '/' + split_path.take(i+1).join('/'))
+      end
+    end
+  end
 end
