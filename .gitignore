@@ -22,3 +22,5 @@
 # Ignoring Gemfile.lock for early development
 Gemfile.lock
 
+# Tiff images
+*.tif
