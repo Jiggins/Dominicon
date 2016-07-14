@@ -31,12 +31,16 @@ ActiveRecord::Schema.define(version: 20160713133325) do
     t.string   "description"
     t.string   "publisher"
     t.string   "url"
-    t.string   "image"
     t.integer  "min_players"
     t.integer  "max_players"
+    t.integer  "stock"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
     t.string   "slug"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
   end
 
   add_index "games_boardgames", ["slug"], name: "index_games_boardgames_on_slug", unique: true

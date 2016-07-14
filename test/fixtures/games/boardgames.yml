@@ -5,17 +5,13 @@ one:
   description: MyString
   publisher: MyString
   url: MyString
-  image: MyString
   min_players: 1
   max_players: 1
-  slug: MyString
 
 two:
   name: MyString
   description: MyString
   publisher: MyString
   url: MyString
-  image: MyString
   min_players: 1
   max_players: 1
-  slug: MyString

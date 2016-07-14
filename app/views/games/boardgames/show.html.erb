@@ -1,44 +1,37 @@
-<p id="notice"><%= notice %></p>
+<div class="panel panel-body">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @games_boardgame.name %>
-</p>
+  <div class="row">
+    <%# Image %>
+    <div class="col-xs-12 col-sm-4">
+      <%= image_tag @games_boardgame.image.url, class: 'img-responsive thumbnail', alt: @games_boardgame.name  %>
+    </div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @games_boardgame.description %>
-</p>
+    <div class="col-xs-12 col-sm-8">
+      <h2 class="no-margin-top"><%= @games_boardgame.name %></h2>
 
-<p>
-  <strong>Publisher:</strong>
-  <%= @games_boardgame.publisher %>
-</p>
+      <p>
+      <strong>Description:</strong>
+      <%= @games_boardgame.description %>
+      </p>
 
-<p>
-  <strong>Url:</strong>
-  <%= @games_boardgame.url %>
-</p>
+      <p>
+      <strong>Publisher:</strong>
+      <%= @games_boardgame.publisher %>
+      </p>
 
-<p>
-  <strong>Image:</strong>
-  <%= @games_boardgame.image %>
-</p>
+      <p>
+      <strong>Website:</strong>
+      <%= link_to @games_boardgame.url, @games_boardgame.url %>
+      </p>
 
-<p>
-  <strong>Min players:</strong>
-  <%= @games_boardgame.min_players %>
-</p>
+      <p>
+      <strong>Players:</strong>
+      <%= @games_boardgame.min_players %> - <%= @games_boardgame.max_players %>
+      </p>
 
-<p>
-  <strong>Max players:</strong>
-  <%= @games_boardgame.max_players %>
-</p>
-
-<p>
-  <strong>Slug:</strong>
-  <%= @games_boardgame.slug %>
-</p>
-
-<%= link_to 'Edit', edit_games_boardgame_path(@games_boardgame) %> |
-<%= link_to 'Back', games_boardgames_path %>
+      <%= link_to 'Edit', edit_games_boardgame_path(@games_boardgame) %> |
+      <%= link_to 'Back', games_boardgames_path %>
+    </div>
+  </div>
+</div>

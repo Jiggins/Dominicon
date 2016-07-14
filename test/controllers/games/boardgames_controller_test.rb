@@ -18,7 +18,7 @@ class Games::BoardgamesControllerTest < ActionController::TestCase
 
   test "should create games_boardgame" do
     assert_difference('Games::Boardgame.count') do
-      post :create, games_boardgame: { description: @games_boardgame.description, image: @games_boardgame.image, max_players: @games_boardgame.max_players, min_players: @games_boardgame.min_players, name: @games_boardgame.name, publisher: @games_boardgame.publisher, slug: @games_boardgame.slug, url: @games_boardgame.url }
+      post :create, games_boardgame: { description: @games_boardgame.description, max_players: @games_boardgame.max_players, min_players: @games_boardgame.min_players, name: @games_boardgame.name, publisher: @games_boardgame.publisher, url: @games_boardgame.url }
     end
 
     assert_redirected_to games_boardgame_path(assigns(:games_boardgame))
@@ -35,7 +35,7 @@ class Games::BoardgamesControllerTest < ActionController::TestCase
   end
 
   test "should update games_boardgame" do
-    patch :update, id: @games_boardgame, games_boardgame: { description: @games_boardgame.description, image: @games_boardgame.image, max_players: @games_boardgame.max_players, min_players: @games_boardgame.min_players, name: @games_boardgame.name, publisher: @games_boardgame.publisher, slug: @games_boardgame.slug, url: @games_boardgame.url }
+    patch :update, id: @games_boardgame, games_boardgame: { description: @games_boardgame.description, max_players: @games_boardgame.max_players, min_players: @games_boardgame.min_players, name: @games_boardgame.name, publisher: @games_boardgame.publisher, url: @games_boardgame.url }
     assert_redirected_to games_boardgame_path(assigns(:games_boardgame))
   end
 

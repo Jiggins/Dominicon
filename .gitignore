@@ -24,3 +24,6 @@ Gemfile.lock
 
 # Tiff images
 *.tif
+
+# Model Images
+public/system

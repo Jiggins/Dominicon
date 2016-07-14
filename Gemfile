@@ -29,11 +29,20 @@ gem 'puma'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 
+# rails-bootstrap-forms is a Rails form builder that makes it super easy to
+# create beautiful-looking forms with Twitter Bootstrap 3+. Wraps the standard
+# Rails form helpers so it's practically a drop-in replacement.
+gem 'bootstrap_form'
+
 # FriendlyId is the “Swiss Army bulldozer” of slugging and permalink plugins
 # for ActiveRecord. It allows you to create pretty URL’s and work with
 # human-friendly strings as if they were numeric ids for ActiveRecord models.
 # http://norman.github.io/friendly_id/
 gem 'friendly_id', '~> 5.0'
+
+# Easy file attachment management for ActiveRecord
+# https://thoughtbot.com/open-source
+gem "paperclip", "~> 4.1.1"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
