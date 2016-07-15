@@ -44,8 +44,14 @@ module ApplicationHelper
       split_path = request.path.split('/').drop(1)
       concat content_tag :li, (link_to 'Home', '/')
       split_path.each_with_index do |p, i|
-        concat content_tag :li, (link_to p.capitalize, '/' + split_path.take(i+1).join('/'))
+        concat content_tag :li, (link_to p.capitalize_each('-'), '/' + split_path.take(i+1).join('/'))
       end
     end
+  end
+end
+
+class String
+  def capitalize_each(splitter = ' ')
+    split(splitter).map(&:capitalize).join(' ')
   end
 end
