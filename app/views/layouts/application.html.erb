@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <script src="https://npmcdn.com/masonry-layout@4.1/dist/masonry.pkgd.min.js"></script>
+    <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
     <%= csrf_meta_tags %>
   </head>
   <body>
@@ -39,6 +41,7 @@
           <%# See: app/helpers/application_helper.rb %>
           <%= nav_bar do %>
             <%= nav_link "About", about_path %>
+            <%= nav_link "Games", games_path %>
           <% end %>
 
         </div>
@@ -47,17 +50,17 @@
 
     <div class="container">
       <div class="row">
-
         <div class="col-xs-12">
           <%= breadcrumbs %>
         </div>
       </div>
 
       <%= yield %>
+
     </div>
   </body>
 </html>
 
-<% unless Rails.env.production? %>
- <% console %>
-<% end %>
+<%# <% unless Rails.env.production? %>
+<%#  <% console %>
+<%# <% end %>

@@ -1,41 +1,25 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Games Boardgames</h1>
+<div class="row">
+  <div class="col-xs-12">
+    <div class="panel panel-body">
+      Boardgames
+    </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Publisher</th>
-      <th>Url</th>
-      <th>Image</th>
-      <th>Min players</th>
-      <th>Max players</th>
-      <th>Slug</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @games_boardgames.each do |games_boardgame| %>
-      <tr>
-        <td><%= games_boardgame.name %></td>
-        <td><%= games_boardgame.description %></td>
-        <td><%= games_boardgame.publisher %></td>
-        <td><%= games_boardgame.url %></td>
-        <td><%= games_boardgame.image %></td>
-        <td><%= games_boardgame.min_players %></td>
-        <td><%= games_boardgame.max_players %></td>
-        <td><%= games_boardgame.slug %></td>
-        <td><%= link_to 'Show', games_boardgame %></td>
-        <td><%= link_to 'Edit', edit_games_boardgame_path(games_boardgame) %></td>
-        <td><%= link_to 'Destroy', games_boardgame, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Boardgame', new_games_boardgame_path %>
+    <div class="row">
+      <div class="masonry-container">
+        <% @games_boardgames.each do |game| %>
+          <%= link_to games_boardgame_url(game), class: 'game-preview' do %>
+            <div class="grid-item col-sm-6 col-md-4 col-xs-12">
+              <div class="panel panel-body">
+                <%= image_tag game.image.url, class: 'img-responsive thumbnail', alt: game.name  %>
+                <h2><%= game.name %></h2>
+                <%= game.description %>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

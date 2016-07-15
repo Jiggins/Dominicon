@@ -15,3 +15,15 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
+
+$(document).ready(function () {
+    var $container = $('.masonry-container');
+
+    $container.imagesLoaded(function () {
+        $container.masonry({
+            itemSelector: '.grid-item',
+            columnWidth:  '.grid-item',
+            transitionDuration: 0
+        });
+    });
+});
