@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @games_console.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @games_console.description %>
+</p>
+
+<p>
+  <strong>Console:</strong>
+  <%= @games_console.console %>
+</p>
+
+<p>
+  <strong>Publisher:</strong>
+  <%= @games_console.publisher %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @games_console.url %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @games_console.image %>
+</p>
+
+<p>
+  <strong>Min players:</strong>
+  <%= @games_console.min_players %>
+</p>
+
+<p>
+  <strong>Max players:</strong>
+  <%= @games_console.max_players %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @games_console.image %>
+</p>
+
+<p>
+  <strong>Slug:</strong>
+  <%= @games_console.slug %>
+</p>
+
+<%= link_to 'Edit', edit_games_console_path(@games_console) %> |
+<%= link_to 'Back', games_consoles_path %>

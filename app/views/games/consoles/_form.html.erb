@@ -1,0 +1,57 @@
+<%= form_for(@games_console) do |f| %>
+  <% if @games_console.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@games_console.errors.count, "error") %> prohibited this games_console from being saved:</h2>
+
+      <ul>
+      <% @games_console.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :console %><br>
+    <%= f.text_field :console %>
+  </div>
+  <div class="field">
+    <%= f.label :publisher %><br>
+    <%= f.text_field :publisher %>
+  </div>
+  <div class="field">
+    <%= f.label :url %><br>
+    <%= f.text_field :url %>
+  </div>
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.text_field :image %>
+  </div>
+  <div class="field">
+    <%= f.label :min_players %><br>
+    <%= f.number_field :min_players %>
+  </div>
+  <div class="field">
+    <%= f.label :max_players %><br>
+    <%= f.number_field :max_players %>
+  </div>
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.text_field :image %>
+  </div>
+  <div class="field">
+    <%= f.label :slug %><br>
+    <%= f.text_field :slug %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

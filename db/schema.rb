@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160713133325) do
+ActiveRecord::Schema.define(version: 20160717202249) do
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
@@ -44,5 +44,26 @@ ActiveRecord::Schema.define(version: 20160713133325) do
   end
 
   add_index "games_boardgames", ["slug"], name: "index_games_boardgames_on_slug", unique: true
+
+  create_table "games_consoles", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.string   "console"
+    t.string   "publisher"
+    t.string   "url"
+    t.string   "image"
+    t.integer  "min_players"
+    t.integer  "max_players"
+    t.integer  "stock"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "slug"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
+
+  add_index "games_consoles", ["slug"], name: "index_games_consoles_on_slug", unique: true
 
 end

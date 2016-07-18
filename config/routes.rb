@@ -1,18 +1,14 @@
 Rails.application.routes.draw do
 
-  namespace :games do
-    resources :boardgames
-  end
-  namespace :games do
-    end
   root 'home#index'
 
   get 'about', to: 'about#index'
   get 'games', to: 'games#index'
 
   namespace :games do
-    end
-
+    resources :boardgames
+    resources :consoles
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
