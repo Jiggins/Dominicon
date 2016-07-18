@@ -8,30 +8,35 @@
     </div>
 
     <div class="col-xs-12 col-sm-8">
-      <h2 class="no-margin-top"><%= @games_boardgame.name %></h2>
+      <div class="row">
+        <div class="col-xs-12">
+          <h2 class="no-margin-top"><%= @games_boardgame.name %></h2>
 
-      <p>
-      <strong>Description:</strong>
-      <%= @games_boardgame.description %>
-      </p>
+          <%= simple_format @games_boardgame.description %>
+        </div>
+      </div>
 
-      <p>
-      <strong>Publisher:</strong>
-      <%= @games_boardgame.publisher %>
-      </p>
+      <div class="row">
+        <div class="col-xs-12">
+          <p>
+          <strong>Publisher:</strong>
+          <%= @games_boardgame.publisher %>
+          </p>
 
-      <p>
-      <strong>Website:</strong>
-      <%= link_to @games_boardgame.url, @games_boardgame.url %>
-      </p>
+          <p>
+          <strong>Website:</strong>
+          <%= link_to @games_boardgame.url, @games_boardgame.url %>
+          </p>
 
-      <p>
-      <strong>Players:</strong>
-      <%= @games_boardgame.min_players %> - <%= @games_boardgame.max_players %>
-      </p>
+          <p>
+          <strong>Players:</strong>
+          <%= @games_boardgame.min_players %> - <%= @games_boardgame.max_players %>
+          </p>
 
-      <%= link_to 'Edit', edit_games_boardgame_path(@games_boardgame) %> |
-      <%= link_to 'Back', games_boardgames_path %>
+          <%= link_to 'Edit', edit_games_boardgame_path(@games_boardgame) %> |
+          <%= link_to 'Back', games_boardgames_path %>
+        </div>
+      </div>
     </div>
   </div>
 </div>
