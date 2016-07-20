@@ -1,6 +1,20 @@
-<h1>Editing Games Console</h1>
+<div class="row">
+  <div class="col-xs-12">
+    <div class="panel panel-body">
+      <h1>Editing <%= @games_console.name %></h1>
+    </div>
 
-<%= render 'form' %>
+    <div class="row">
+      <div class="col-xs-9">
+        <div class="panel panel-body">
+          <%= render 'form' %>
+          <%= link_to 'Show', @games_console %> |
+          <%= link_to 'Back', games_consoles_path %>
+        </div>
+      </div>
 
-<%= link_to 'Show', @games_console %> |
-<%= link_to 'Back', games_consoles_path %>
+      <div class="col-xs-3">
+        <div class="panel panel-body">
+    </div>
+  </div>
+</div>
