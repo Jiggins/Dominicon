@@ -13,7 +13,7 @@ module GamesHelper
                 content_tag :div, class: 'panel panel-body' do
                   concat image_tag game.image.url, class: 'img-responsive thumbnail', alt: game.name
                   concat content_tag :h2, sanitize(game.name)
-                  concat simple_format truncate game.description, length: 512, separator: '.' 
+                  concat simple_format truncate game.description, length: 512, separator: '.'
                 end
               end
             end
@@ -24,3 +24,10 @@ module GamesHelper
     end
   end
 end
+
+class String
+  def make_sym
+    self.downcase.gsub(' ', '_').to_sym
+  end
+end
+

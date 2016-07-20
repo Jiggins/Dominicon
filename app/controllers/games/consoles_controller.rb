@@ -1,6 +1,8 @@
 class Games::ConsolesController < ApplicationController
   before_action :set_games_console, only: [:show, :edit, :update, :destroy]
 
+  CONSOLES = ['Playstation 3', 'Playstation 4', 'Wii U', 'Xbox 360', 'Xbox One']
+
   # GET /games/consoles
   # GET /games/consoles.json
   def index
@@ -15,10 +17,12 @@ class Games::ConsolesController < ApplicationController
   # GET /games/consoles/new
   def new
     @games_console = Games::Console.new
+    @all_consoles = CONSOLES
   end
 
   # GET /games/consoles/1/edit
   def edit
+    @all_consoles = CONSOLES
   end
 
   # POST /games/consoles
