@@ -6,7 +6,6 @@ class CreateGamesConsoles < ActiveRecord::Migration
       t.string     :console
       t.string     :publisher
       t.string     :url
-      t.string     :image
       t.integer    :min_players
       t.integer    :max_players
       t.integer    :stock

@@ -51,7 +51,6 @@ ActiveRecord::Schema.define(version: 20160717202249) do
     t.string   "console"
     t.string   "publisher"
     t.string   "url"
-    t.string   "image"
     t.integer  "min_players"
     t.integer  "max_players"
     t.integer  "stock"

@@ -1,16 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  description: MyString
-  console: MyString
-  publisher: MyString
-  url: MyString
-  image: MyString
+  name: Smash Bros
+  description: Fuckin' Nintendo lads just going at it
+  console: Wii U
+  publisher: Nintendo
+  url: yes
   min_players: 1
   max_players: 1
-  image: 
-  slug: MyString
 
 two:
   name: MyString
@@ -18,8 +15,5 @@ two:
   console: MyString
   publisher: MyString
   url: MyString
-  image: MyString
   min_players: 1
   max_players: 1
-  image: 
-  slug: MyString

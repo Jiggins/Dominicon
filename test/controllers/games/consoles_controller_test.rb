@@ -18,7 +18,16 @@ class Games::ConsolesControllerTest < ActionController::TestCase
 
   test "should create games_console" do
     assert_difference('Games::Console.count') do
-      post :create, games_console: { console: @games_console.console, description: @games_console.description, image: @games_console.image, image: @games_console.image, max_players: @games_console.max_players, min_players: @games_console.min_players, name: @games_console.name, publisher: @games_console.publisher, slug: @games_console.slug, url: @games_console.url }
+      post :create, games_console: {
+        console: @games_console.console,
+        description: @games_console.description,
+        max_players: @games_console.max_players,
+        min_players: @games_console.min_players,
+        name: @games_console.name,
+        publisher: @games_console.publisher,
+        slug: @games_console.slug,
+        url: @games_console.url
+      }
     end
 
     assert_redirected_to games_console_path(assigns(:games_console))
@@ -35,7 +44,16 @@ class Games::ConsolesControllerTest < ActionController::TestCase
   end
 
   test "should update games_console" do
-    patch :update, id: @games_console, games_console: { console: @games_console.console, description: @games_console.description, image: @games_console.image, image: @games_console.image, max_players: @games_console.max_players, min_players: @games_console.min_players, name: @games_console.name, publisher: @games_console.publisher, slug: @games_console.slug, url: @games_console.url }
+    patch :update, id: @games_console, games_console: {
+      console: @games_console.console,
+      description: @games_console.description,
+      max_players: @games_console.max_players,
+      min_players: @games_console.min_players,
+      name: @games_console.name,
+      publisher: @games_console.publisher,
+      slug: @games_console.slug,
+      url: @games_console.url
+    }
     assert_redirected_to games_console_path(assigns(:games_console))
   end
 
