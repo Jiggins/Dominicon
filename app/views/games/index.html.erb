@@ -1,35 +1,45 @@
 <div class="row">
   <div class="col-xs-6">
-    <div class="panel panel-body">
-      <%= link_to 'Boardgames', games_boardgames_path %>
-    </div>
+    <%= link_to games_boardgames_path, class: 'game-preview' do %>
+      <div class="panel panel-body">
+        Boardgames
+      </div>
+    <% end %>
   </div>
 
   <div class="col-xs-6">
-    <div class="panel panel-body">
-      <%= link_to 'Card Games' %>
-    </div>
+    <%= link_to '', class: 'game-preview' do %>
+      <div class="panel panel-body">
+        Card Games
+      </div>
+    <% end %>
   </div>
 </div>
 
 <div class="row">
   <div class="col-xs-6">
-    <div class="panel panel-body">
-      <%= link_to 'Consoles', games_consoles_path %>
-    </div>
+    <%= link_to games_consoles_path, class: 'game-preview' do %>
+      <div class="panel panel-body">
+        Consoles
+      </div>
+    <% end %>
   </div>
 
   <div class="col-xs-6">
-    <div class="panel panel-body">
-      <%= link_to 'RPGs' %>
-    </div>
+    <%= link_to '', class: 'game-preview' do %>
+      <div class="panel panel-body">
+        RPGs
+      </div>
+    <% end %>
   </div>
 </div>
 
 <div class="row">
   <div class="col-xs-12">
-    <div class="panel panel-body">
-      <%= link_to 'Wargames' %>
-    </div>
+    <%= link_to '', class: 'game-preview' do %>
+      <div class="panel panel-body">
+        Wargames
+      </div>
+    <% end %>
   </div>
 </div>
