@@ -61,6 +61,6 @@
   </body>
 </html>
 
-<%# <% unless Rails.env.production? %>
-<%#  <% console %>
-<%# <% end %>
+<% if Rails.env.development? && params[:console] %>
+ <% console %>
+<% end %>
