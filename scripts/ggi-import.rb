@@ -24,6 +24,7 @@ CSV.foreach "scripts/ggi-catalogue.csv" do |row|
 
   players.gsub!(matcher, replacements)
 
-  Games::Console.create! name: name, console: console, min_players: 1, max_players: players.to_i, stock: 1
+  Games::Console.create! name: name, console: console, min_players: 1, max_players: players.to_i, stock: 1, owner: :ggi
+  Games::Console.where(slug: 'game-title').first.destroy # Kill the header line
 end
 

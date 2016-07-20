@@ -11,14 +11,15 @@
     </div>
   <% end %>
 
-  <%= f.text_field :name %>
+  <%= f.text_field :name, required: true %>
   <%= f.text_field :description %>
   <%= f.collection_select(:console, @all_consoles, :make_sym, :to_s) %>
   <%= f.text_field :publisher %>
   <%= f.text_field :url %>
-  <%= f.number_field :min_players %>
-  <%= f.number_field :max_players %>
-  <%= f.number_field :stock %>
+  <%= f.number_field :min_players, required: true, min: 1, value: 1, %>
+  <%= f.number_field :max_players, required: true, min: 1 %>
+  <%= f.number_field :stock, value: 1 %>
+  <%= f.text_field :owner, vaule: :game_soc %>
   <%= f.file_field :image %>
   <%= f.submit %>
 <% end %>

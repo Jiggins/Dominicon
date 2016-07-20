@@ -11,13 +11,13 @@
     </div>
   <% end %>
 
-  <%= f.text_field :name %>
-  <%= f.text_area  :description %>
-  <%= f.text_field :publisher %>
-  <%= f.text_field :url %>
-  <%= f.number_field :min_players %>
-  <%= f.number_field :max_players %>
+  <%= f.text_field   :name, required: true %>
+  <%= f.text_area    :description %>
+  <%= f.text_field   :publisher %>
+  <%= f.text_field   :url %>
+  <%= f.number_field :min_players, required: true, min: 1, value: 1 %>
+  <%= f.number_field :max_players, required: true, min: 1 %>
   <%= f.number_field :stock  %>
-  <%= f.file_field :image %>
+  <%= f.file_field   :image %>
   <%= f.submit %>
 <% end %>
