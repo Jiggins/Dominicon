@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get 'about', to: 'about#index'
   get 'games', to: 'games#index'
 
+  resources :events
+
   namespace :games do
     resources :boardgames
     resources :consoles

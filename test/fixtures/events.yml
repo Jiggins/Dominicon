@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyString
+  type: 
+  location: MyString
+  html_link: MyString
+  start: 2016-07-28 11:51:11
+  end: 2016-07-28 11:51:11
+  slug: MyString
+  image: 
+  event_id: MyString
+  i_cal_uid: MyString
+
+two:
+  name: MyString
+  description: MyString
+  type: 
+  location: MyString
+  html_link: MyString
+  start: 2016-07-28 11:51:11
+  end: 2016-07-28 11:51:11
+  slug: MyString
+  image: 
+  event_id: MyString
+  i_cal_uid: MyString
