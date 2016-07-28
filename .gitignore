@@ -29,3 +29,6 @@ Gemfile.lock
 # Model Images
 public/assets
 public/system
+
+# Environment variables
+.env
