@@ -9,9 +9,12 @@ module GamesHelper
         controller_list.each do |game|
           grid_item = capture do
             link_to "#{request.path}/#{game.slug}", class: 'game-preview' do
-              content_tag :div, class: 'grid-item col-xs-12 col-sm-6 col-md-4' do
+              content_tag :div, class: 'grid-item col-xs-12 col-sm-6 col-md-4 col-lg-3' do
                 content_tag :div, class: 'panel panel-body' do
-                  concat image_tag game.image.url, class: 'img-responsive thumbnail', alt: game.name
+                  unless game.image_file_name.nil?
+                    concat image_tag game.image.url, class: 'img-responsive thumbnail', alt: game.name
+                  end
+
                   concat content_tag :h2, sanitize(game.name)
                   concat simple_format truncate game.description, length: 512, separator: '.'
                 end
