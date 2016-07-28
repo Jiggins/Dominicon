@@ -44,6 +44,10 @@ gem 'friendly_id', '~> 5.0'
 # https://thoughtbot.com/open-source
 gem "paperclip", "~> 4.1.1"
 
+# Google API - https://developers.google.com/api-client-library/ruby/
+gem 'google-api-client'
+gem 'googleauth'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
