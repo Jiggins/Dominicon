@@ -17,9 +17,6 @@
 /tmp
 .sass-cache
 
-# Ignoring secrets, because... secrets
-/config/secrets.yml
-
 # Ignoring Gemfile.lock for early development
 Gemfile.lock
 
